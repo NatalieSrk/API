@@ -1,0 +1,364 @@
+{
+	"id": "6f220d70-43c2-4d6c-b830-a69c80f77fa6",
+	"name": "Demoshopping",
+	"timestamp": "2025-01-26T07:31:57.248Z",
+	"collection_id": "41271812-9cbfc429-b354-46b9-b403-3a4c0907b4d7",
+	"folder_id": "41271812-1cdf3c1b-b2b6-4116-a1a6-15c087e6ccb4",
+	"environment_id": "41271812-594e1e5a-6c66-4249-9c68-e42afdb832aa",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2025-01-26T07:31:53.524Z",
+	"totalFail": 20,
+	"results": [
+		{
+			"id": "bdb49f0d-6d02-4640-860e-025fcee252b1",
+			"name": "Возвращает список всех продуктов",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Response contains a list of products": true,
+				"Each product has required fields": false,
+				"Response time is less than 500ms": true,
+				"Content-Type header is present": false
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains a list of products": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each product has required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Response contains a list of products": true,
+					"Each product has required fields": false,
+					"Response time is less than 500ms": true,
+					"Content-Type header is present": false
+				}
+			]
+		},
+		{
+			"id": "3526dce6-8bf1-486b-a76a-81bdad957183",
+			"name": "Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 201": false,
+				"Response contains the created product": false,
+				"Response time is less than 500ms": true,
+				"Content-Type header is present": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains the created product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Status code is 201": false,
+					"Response contains the created product": false,
+					"Response time is less than 500ms": true,
+					"Content-Type header is present": false
+				}
+			]
+		},
+		{
+			"id": "940f1b05-10bc-4ede-ac00-7c8fb8959086",
+			"name": "Поиск товара по id",
+			"url": "https://qa.demoshopping.ru/products/id/20072",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains the correct product ID": false,
+				"Response contains required fields": true,
+				"Content-Type header is present": false,
+				"Status code is 404 for non-existent product": false,
+				"Response contains error message for non-existent product": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains the correct product ID": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 404 for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains error message for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains the correct product ID": false,
+					"Response contains required fields": true,
+					"Content-Type header is present": false,
+					"Status code is 404 for non-existent product": false,
+					"Response contains error message for non-existent product": false
+				}
+			]
+		},
+		{
+			"id": "d51b7486-e23a-4b4e-ab88-4fb4dedeca5a",
+			"name": "Полное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/20072",
+			"time": 55,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains the updated product": false,
+				"Response time is less than 500ms": true,
+				"Content-Type header is present": false,
+				"Status code is 404 for non-existent product": false,
+				"Response contains error message for non-existent product": false,
+				"Status code is 400 for invalid product ID": false,
+				"Response contains error message for invalid product ID": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains the updated product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 404 for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains error message for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 400 for invalid product ID": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains error message for invalid product ID": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains the updated product": false,
+					"Response time is less than 500ms": true,
+					"Content-Type header is present": false,
+					"Status code is 404 for non-existent product": false,
+					"Response contains error message for non-existent product": false,
+					"Status code is 400 for invalid product ID": false,
+					"Response contains error message for invalid product ID": false
+				}
+			]
+		},
+		{
+			"id": "ce1b3970-8a22-4351-9152-30fc142f5dc4",
+			"name": "Частичное обновление товара",
+			"url": "https://qa.demoshopping.ru/products/id/20072",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status code is 404 for non-existent product": false,
+				"Status code is 400 for invalid product ID": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404 for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 400 for invalid product ID": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status code is 404 for non-existent product": false,
+					"Status code is 400 for invalid product ID": false
+				}
+			]
+		},
+		{
+			"id": "40d9d216-c7eb-436c-bb0d-ecdec1f6a6ec",
+			"name": "Удаление товара по id",
+			"url": "https://qa.demoshopping.ru/products/id/20072",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains success message": false,
+				"Response time is less than 500ms": true,
+				"Verify product is deleted": true,
+				"Status code is 404 for non-existent product": false,
+				"Response contains error message for non-existent product": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify product is deleted": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404 for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response contains error message for non-existent product": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains success message": false,
+					"Response time is less than 500ms": true,
+					"Verify product is deleted": true,
+					"Status code is 404 for non-existent product": false,
+					"Response contains error message for non-existent product": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 338,
+	"collection": {
+		"requests": [
+			{
+				"id": "bdb49f0d-6d02-4640-860e-025fcee252b1",
+				"method": "GET"
+			},
+			{
+				"id": "3526dce6-8bf1-486b-a76a-81bdad957183",
+				"method": "POST"
+			},
+			{
+				"id": "940f1b05-10bc-4ede-ac00-7c8fb8959086",
+				"method": "GET"
+			},
+			{
+				"id": "d51b7486-e23a-4b4e-ab88-4fb4dedeca5a",
+				"method": "PUT"
+			},
+			{
+				"id": "ce1b3970-8a22-4351-9152-30fc142f5dc4",
+				"method": "PATCH"
+			},
+			{
+				"id": "40d9d216-c7eb-436c-bb0d-ecdec1f6a6ec",
+				"method": "DELETE"
+			}
+		]
+	}
+}
